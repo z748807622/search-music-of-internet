@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta name="referrer" content="never">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="blobfish，个人音乐播放器，个人学习，免费音乐">
+    <meta name="description" content="一款开源与github的播放器，包含列表，音量，进度，时间以及模式等功能，不依赖任何库">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>blobfish</title>
+</head>
+<body>
+
+<div class="grid-demo-info">
+    <h1 class="m-demo-title">在线音乐播放器</h1>
+</div>
+<div id="content">
+        <input type="input" id="input"> 
+        <input type="button" id="sub" class="btn-1" value="查询">
+        </br>
+        <div id="method">
+            <input name="baidu" type="checkbox" value="true" />百度音乐
+            <input name="kugou" type="checkbox" value="" />酷狗音乐
+        </div>
+</div>
+<div id="big">
+    <div class="grid-music-container f-usn main">
+        <div class="m-music-play-wrap">
+            <div class="u-cover"></div>
+            <div class="m-now-info">
+                <h1 class="u-music-title"><strong>标题</strong><small>歌手</small></h1>
+                <div class="m-now-controls">
+                    <div class="u-control u-process">
+                        <span class="buffer-process"></span>
+                        <span class="current-process"></span>
+                    </div>
+                    <div class="u-control u-time">00:00/00:00</div>
+                    <div class="u-control u-volume">
+                        <div class="volume-process" data-volume="0.50">
+                            <span class="volume-current"></span>
+                            <span class="volume-bar"></span>
+                            <span class="volume-event"></span>
+                        </div>
+                        <a class="volume-control"></a>
+                    </div>
+                </div>
+                <div class="m-play-controls">
+                    <a class="u-play-btn prev" title="上一曲"></a>
+                    <a class="u-play-btn ctrl-play play" id="play" title="暂停"></a>
+                    <a class="u-play-btn next" title="下一曲"></a>
+                    <a class="u-play-btn mode mode-list current" title="列表循环"></a>
+                    <a class="u-play-btn mode mode-random" title="随机播放"></a>
+                    <a class="u-play-btn mode mode-single" title="单曲循环"></a>
+                </div>
+            </div>
+        </div>
+        <div class="f-cb">&nbsp;</div>
+        <div class="m-music-list-wrap"></div>
+        <div class="m-music-lyric-wrap geci" scroll="no">
+            <div class="inner">
+                <ul class="js-music-lyric-content">
+                    <li class="eof">暂无歌词...</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>
+        <a href="mailto:blobfishdad@gmail.com">blobfishdad@gmail.com</a>
+        <a href="http://www.beianbeian.com/beianxinxi/b35f0a81-f8a3-41c3-b7a4-c43a40f29f78.html" target="_blank">鄂ICP备15013653号-1</a>
+    </p>
+</footer>
+<script type="text/javascript" src="./js/function.js"></script>
+<script type="text/javascript" src="./js/work.js"></script>
+</body>
+</html>
