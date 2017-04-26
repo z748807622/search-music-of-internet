@@ -14,12 +14,12 @@ app.post('/find',function (req,res) {
     //res.send('123');
     console.log(name+method)
     switch(method){
-    	case 'baidu':find.baidu(name,function(data){
+    	case 'baidu':find.baidu(res,name,function(data){
     		res.json(data);
     		return;
     	})
     	break;
-    	case 'kugou':find.kugou(name,function(data){
+    	case 'kugou':find.kugou(res,name,function(data){
     		res.json(data);
     		return;
     	})
