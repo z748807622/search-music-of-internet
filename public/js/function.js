@@ -480,9 +480,9 @@ SmohanMusic.prototype = {
      * @param index
      */
     getLyric : function (index) {
-        if(this.lyricCache[index]){
-            this.renderLyric(this.lyricCache[index]);
-        }else{
+        //if(this.lyricCache[index]){
+        //    this.renderLyric(this.lyricCache[index]);
+       // }else{
             var url = this.musicList[index]["lyric"], me = this;
             if(url){
                 ajax(url, function (data) {
@@ -493,7 +493,7 @@ SmohanMusic.prototype = {
                 this.lyricCache[index] = null;
                 me.renderLyric(null);
             }
-        }
+       // }
     },
     /**
      * 解析歌词
