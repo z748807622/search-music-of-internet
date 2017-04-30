@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var find = require('./models/find');
+var querystring = require('querystring');
 
 var app = express();
 
@@ -12,7 +13,8 @@ app.post('/find',function (req,res) {
     var name = req.body.name;
     var method = req.body.method;
     //res.send('123');
-    console.log(name+method)
+    console.log(name+method);
+    name = querystring.escape(name);
     switch(method){
     	case 'baidu':find.baidu(res,name,function(data){
     		res.json(data);
